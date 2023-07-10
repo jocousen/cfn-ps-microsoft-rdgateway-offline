@@ -5,7 +5,7 @@ Description: >-
   **WARNING** This template creates Amazon EC2 Windows instance and related resources.
   You will be billed for the AWS resources used if you create a stack from this template. (qs-1qup6rag3)
 Metadata:
-  cfn-lint: { config: { ignore_checks: [W9004 W9006] } }
+  cfn-lint: { config: { ignore_checks: [W9004, W9006] } }
   QuickStartDocumentation:
     EntrypointName: "Parameters for launching into an existing VPC (standalone)"
   AWS::CloudFormation::Interface:
