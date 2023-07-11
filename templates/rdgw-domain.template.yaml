@@ -132,7 +132,7 @@ Parameters:
     ConstraintDescription: The Quick Start bucket name can include numbers, lowercase
       letters, uppercase letters, and hyphens (-). It cannot start or end with a 
       hyphen (-).
-    Default: aws-quickstart
+    Default: aws-ia-us-east-1
     Description: Name of the S3 bucket for your copy of the Quick Start assets. 
       Keep the default name unless you are customizing the template. 
       Changing the name updates code references to point to a new Quick 
@@ -144,7 +144,7 @@ Parameters:
     AllowedPattern: ^[0-9a-zA-Z-/]*$
     ConstraintDescription: The Quick Start S3 key prefix can include numbers, lowercase letters,
       uppercase letters, hyphens (-), and forward slash (/).
-    Default: quickstart-microsoft-rdgateway/
+    Default: cfn-ps-microsoft-rdgateway/
     Description: S3 key prefix that is used to simulate a directory for your copy of the 
       Quick Start assets. Keep the default prefix unless you are customizing 
       the template. Changing this prefix updates code references to point to 
@@ -218,7 +218,7 @@ Rules:
             - !Ref 'AWS::Region'
         AssertDescription: M4 instances are not available in the Paris region.
 Conditions:
-  UsingDefaultBucket: !Equals [!Ref QSS3BucketName, 'aws-quickstart']
+  UsingDefaultBucket: !Equals [!Ref QSS3BucketName, 'aws-ia-us-east-1']
 Resources:
   DomainJoinSecrets:
     Type: AWS::SecretsManager::Secret
@@ -253,7 +253,7 @@ Resources:
             description: "NetBIOS name of the domain (up to 15 characters) for users of earlier versions of Windows (for example, EXAMPLE)."
             type: "String"
           QSS3BucketName:
-            default: "aws-quickstart"
+            default: "aws-ia-us-east-1"
             description: "Name of the S3 bucket for your copy of the Quick Start assets. 
       Keep the default name unless you are customizing the template. 
       Changing the name updates code references to point to a new Quick 
@@ -262,7 +262,7 @@ Resources:
       See https://aws-quickstart.github.io/option1.html."
             type: "String"
           QSS3KeyPrefix:
-            default: "quickstart-microsoft-rdgateway/"
+            default: "cfn-ps-microsoft-rdgateway/"
             description: "S3 key prefix that is used to simulate a directory for your copy of the 
       Quick Start assets. Keep the default prefix unless you are customizing 
       the template. Changing this prefix updates code references to point to 
