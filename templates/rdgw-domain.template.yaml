@@ -962,3 +962,4 @@ Outputs:
   RemoteDesktopGatewaySGID:
     Value: !Ref 'RemoteDesktopGatewaySG'
     Description: Remote Desktop Gateway security group ID.
+  
