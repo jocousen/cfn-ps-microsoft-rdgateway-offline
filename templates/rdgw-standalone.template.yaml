@@ -129,7 +129,7 @@ Parameters:
     ConstraintDescription: The Quick Start bucket name can include numbers, lowercase
       letters, uppercase letters, and hyphens (-). It cannot start or end with a 
       hyphen (-).
-    Default: aws-ia-us-east-1
+    Default: aws-ia
     Description: Name of the S3 bucket for your copy of the Quick Start assets. 
       Keep the default name unless you are customizing the template. 
       Changing the name updates code references to point to a new Quick 
@@ -223,7 +223,7 @@ Rules:
         AssertDescription: M4 instances are not available in the Paris region.
 Conditions:
   UsingDefaultAppName: !Equals [!Ref AppInsightsApplicationName, '']
-  UsingDefaultBucket: !Equals [!Ref QSS3BucketName, 'aws-ia-us-east-1']
+  UsingDefaultBucket: !Equals [!Ref QSS3BucketName, 'aws-ia']
   appInsightsMonitoring: !Equals [!Ref SetupAppInsightsMonitoring, 'true']
 Resources:
   RDGWLocalUserSecrets:
