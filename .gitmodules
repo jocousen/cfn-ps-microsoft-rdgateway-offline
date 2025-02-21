@@ -1,11 +1,11 @@
 [submodule "submodules/cfn-ps-aws-vpc"]
 	path = submodules/cfn-ps-aws-vpc
-	url = https://github.com/jocousen/cfn-ps-aws-vpc-offline.git
+	url = https://github.com/jocousen/cfn-ps-aws-vpc-offline-offline.git
 	branch = main
 [submodule "submodules/quickstart-microsoft-utilities"]
 	path = submodules/quickstart-microsoft-utilities
-	url = https://github.com/jocousen/quickstart-microsoft-utilities-offline.git
+	url = https://github.com/jocousen/quickstart-microsoft-utilities-offline-offline.git
 	branch = main
 [submodule "docs/boilerplate"]
 	path = docs/boilerplate
-	url = https://github.com/jocousen/aws-ia-documentation-base-common-offline.git
+	url = https://github.com/jocousen/aws-ia-documentation-base-common-offline-offline.git
